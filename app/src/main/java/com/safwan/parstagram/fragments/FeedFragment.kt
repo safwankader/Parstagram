@@ -44,6 +44,7 @@ open class FeedFragment : Fragment() {
 
         postsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+
         queryPosts()
     }
 
@@ -68,7 +69,10 @@ open class FeedFragment : Fragment() {
                             Log.i(TAG, "Post: " + post.getDescription() + " , username: " + post.getUser()?.username)
                         }
 
-                        allPosts.addAll(posts)
+
+                        for(i in 0 until 20)
+                            allPosts.add(i,posts.get(i))
+
                         adapter.notifyDataSetChanged()
                     }
                 }
