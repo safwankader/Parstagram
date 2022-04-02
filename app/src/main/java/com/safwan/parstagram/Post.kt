@@ -4,6 +4,7 @@ import com.parse.ParseClassName
 import com.parse.ParseFile
 import com.parse.ParseObject
 import com.parse.ParseUser
+import java.io.File
 
 // Description : String
 // Image : File
@@ -11,6 +12,7 @@ import com.parse.ParseUser
 
 @ParseClassName("Post")
 class Post : ParseObject() {
+
 
     fun getDescription(): String? {
         return getString(KEY_DESCRIPTION)
@@ -22,6 +24,10 @@ class Post : ParseObject() {
 
     fun setImage(parsefile: ParseFile) {
         put(KEY_IMAGE,parsefile)
+    }
+
+    fun getImage(): ParseFile? {
+        return getParseFile(KEY_IMAGE)
     }
 
     fun getUser() : ParseUser? {

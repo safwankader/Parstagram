@@ -47,9 +47,10 @@ class LoginActivity : AppCompatActivity() {
                 // User has successfully signed created a new account
 
                 // TODO: Navigate user to the MainActivity
-                // TODO: Show a toast to indicate a user successfully signed up for an account
+                Toast.makeText(this,"Succesfully made account, press login to go to your account!",Toast.LENGTH_SHORT).show()
             } else {
                 // TODO: Show a toast to tell user sign up was not successful
+                Toast.makeText(this,"Account sign up unsuccessful",Toast.LENGTH_SHORT).show()
                 e.printStackTrace()
             }
         }
